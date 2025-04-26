@@ -1,2 +1,2 @@
 # wordpress
-wordpress avec @eze-lab
+wordpress avec @Eze-lab
