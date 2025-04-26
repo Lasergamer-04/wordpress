@@ -1,0 +1,73 @@
+.wowp-notification {
+  --_color: var(--wowp-gray-900);
+  position: relative;
+  background-color: color-mix(in srgb, var(--_color) 7%, white);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--_color);
+  padding-block: 1.25rem;
+  padding-inline: 3rem 1.25rem;
+  border-radius: 4px;
+  margin-block: 1rem;
+  &:before {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '\f16d';
+    font-family: dashicons;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--_color);
+
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2rem;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background-color: var(--_color);
+  }
+
+  &.notification-info {
+    --_color: var(--wowp-color-blue);
+    &:before {
+      content: "\f348";
+    }
+  }
+  &.notification-warning {
+    --_color: var(--wowp-color-yellow);
+    &:before {
+      content: "\f534";
+    }
+  }
+  &.notification-error {
+    --_color: var(--wowp-color-red);
+    &:before {
+      content: "\f335";
+    }
+  }
+
+  &.notification-lock {
+    --_color: var(--wowp-color-red);
+    &:before {
+      content: "\f160";
+    }
+  }
+
+  &.notification-success {
+    --_color: var(--wowp-color-green);
+    &:before {
+      content: "\f12a";
+    }
+  }
+}

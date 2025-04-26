@@ -1,0 +1,51 @@
+// Buttons
+.wowp-button__icon {
+  --_color: var(--wowp-gray-700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  appearance: button;
+  background-color: color-mix(in srgb, var(--_color) 7%, white);
+  border-color: var(--_color);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  color: var(--_color);
+  &:hover {
+    background-color: color-mix(in srgb, var(--_color) 15%, white);
+  }
+
+  &.is-remove {
+    --_color: var(--wowp-color-red);
+  }
+}
+
+.wowp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wowp-button.button-secondary {
+  border-color: transparent;
+  color: var(--wowp-gray-900);
+  font-weight: 500;
+}
+
+.wowp-button.button-primary {
+  font-weight: 500;
+}
+
+
+.wowp-button.button-dark {
+  font-weight: 500;
+  border-color: transparent;
+  background-color: var(--wowp-gray-900);
+  color: #ffffff;
+  &:hover {
+    background-color: var(--wowp-gray-700);
+  }
+}

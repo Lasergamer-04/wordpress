@@ -1,0 +1,36 @@
+.is-hidden {
+  display: none;
+}
+
+.wowp-color-blue {
+  color: var(--wowp-color-blue);
+}
+
+.wowp-color-yellow {
+  color: var(--wowp-color-yellow);
+}
+
+.wowp-color-red {
+  color: var(--wowp-color-red);
+}
+
+.wowp-color-green {
+  color: var(--wowp-color-green);
+}
+
+.is-italic {
+  font-style: italic;
+}
+
+.is-full {
+  width: 100%;
+}
+
+.m-w-48 {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.m-top {
+  margin-top: 1.5rem;
+}

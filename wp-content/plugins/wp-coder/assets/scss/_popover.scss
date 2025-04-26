@@ -1,0 +1,19 @@
+.popover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.popover {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: 0;
+  background: white;
+  border: 1px solid var(--wowp-gray-100);
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: var(--wowp-shadow);
+  display: none;
+  z-index: 1000;
+  width: 160px;
+}
+

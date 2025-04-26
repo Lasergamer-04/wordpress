@@ -1,0 +1,39 @@
+:root {
+  --wowp-border: #E4E4E7;
+  --wowp-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --wowp-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  --wowp-gray-500: #6a7282;
+  --wowp-gray-400: #99a1af;
+  --wowp-gray-100: #f3f4f6;
+  --wowp-gray-200: #e5e7eb;
+  --wowp-gray-900: #101828;
+  --wowp-gray-700: #364153;
+
+  --wowp-color-blue: #2b7fff;
+  --wowp-color-yellow: #f0b100;
+  --wowp-color-red: #fb2c36;
+  --wowp-color-green: #00c950;
+}
+
+.wowp {
+  width: calc(100% - 20px);
+
+
+  @import "header";
+  @import "page-header";
+  @import "settings";
+  @import "fields";
+  @import "button";
+
+  @import "tooltip";
+  @import "helpers";
+  @import "command";
+  @import "snippet";
+  @import "popover";
+  @import "pro";
+
+}
+
+@import "notification";
+@import "list";

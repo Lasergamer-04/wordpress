@@ -1,0 +1,153 @@
+.wowp-tools {
+  max-width: 64rem;
+  width: 100%;
+  .wowp-button {
+    margin-top: 1rem;
+  }
+}
+
+.wowp-snippets {
+  max-width: 64rem;
+  width: 100%;
+}
+
+.wowp-snippets__header {
+  padding-bottom: 0.75rem;
+
+  border-bottom: 1px solid var(--wowp-gray-100);
+}
+
+.wowp-snippets__header-title {
+  margin: 0;
+}
+
+.wowp-snippets__header-description {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  color: var(--wowp-gray-400);
+  margin: 0;
+}
+
+.wowp-snippet__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.wowp-snippet__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--wowp-gray-100);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  > .wowp-field.has-checkbox {
+    border: none;
+  }
+  &:has( > .wowp-field.has-checkbox input[type="checkbox"]:checked ) {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 4px;
+      background-color: var(--wowp-color-blue);
+    }
+  }
+}
+
+.wowp-snippet__item-header {
+  flex: 1;
+  label {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--wowp-gray-900);
+  }
+}
+
+.wowp-snippet__item-description {
+  font-size: .8rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  color: var(--wowp-gray-500);
+}
+
+.wowp-snippet__item-expand {
+  width: 100%;
+  border-top: 1px solid var(--wowp-gray-100);
+  padding-top: 1rem;
+
+}
+
+.wowp-snippet__expand-title {
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+// Tab Vertical
+.wowp-snippets__tabs {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 0.75rem;
+}
+
+.wowp-snippets__tabs-radio {
+  display: none;
+}
+
+.wowp-snippets__tabs-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 15rem;
+}
+.wowp-snippets__tabs-tab {
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  color: var(--wowp-gray-900);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  .icon {
+    font-size: 1rem;
+  }
+  &:hover {
+    color: var(--wowp-color-blue);
+  }
+}
+.wowp-snippets__tabs-content {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  max-width: 42rem;
+  width: 100%;
+  > .wowp-button {
+    margin-top: 1rem;
+  }
+}
+
+$tabs: 'content', 'admin', 'login', 'media', 'core', 'comments', 'optimization';
+
+@each $tab in $tabs {
+  ##{'wowp-tab-' + $tab}:checked ~ [data-content='#{'wowp-tab-' + $tab}'] {
+    position: static;
+  }
+
+  ##{'wowp-tab-' + $tab}:checked ~ .wowp-snippets__tabs-labels [for="wowp-tab-#{$tab}"] {
+    background-color: var(--wowp-gray-100);
+
+  }
+}
+

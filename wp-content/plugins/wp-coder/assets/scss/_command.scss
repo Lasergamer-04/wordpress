@@ -1,0 +1,88 @@
+.wowp-command {
+  max-width: 450px;
+  width: 100%;
+  max-height: 380px;
+  height: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--wowp-gray-100);
+  padding: 0;
+
+  .wowp-field {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+}
+
+.wowp-quickcodes-search {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--wowp-gray-100);
+  }
+}
+
+.wowp-qc-list {
+  margin: 0;
+  padding: 4px;
+  li {
+    padding: 0.375rem 0.75rem;
+    margin: 0;
+    color: var(--wowp-gray-900);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    .description {
+      font-weight: normal;
+      color: var(--wowp-gray-700);
+      code {
+        font-size: 0.75rem;
+      }
+    }
+    &.is-active {
+      background-color: #f0f0f0;
+      outline: 1px solid #007cba;
+    }
+  }
+
+  .qc-title {
+    color: var(--wowp-gray-400);
+    font-weight: 500;
+    font-size: .75rem;
+    line-height: 1rem;
+  }
+
+
+  .quickcode {
+    cursor: pointer;
+    border-radius: 0.25rem;
+    &:hover {
+      background-color: var(--wowp-gray-100);
+    }
+  }
+
+  max-height: 300px; /* або інше значення */
+  overflow-y: auto;
+  scrollbar-width: thin;           /* Firefox */
+  scrollbar-color: #ccc transparent; /* Firefox */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
